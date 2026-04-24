@@ -1,16 +1,65 @@
-# React + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Task Manager web application built with **React** and **Vite**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add tasks with a name and time
+- Mark tasks as completed
+- Delete tasks
+- Completed tasks appear visually different (green styling + strikethrough)
+- Live count of completed vs total tasks
 
-## React Compiler
+## Tech Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (Functional Components + Class Components)
+- Vite
+- Plain CSS
 
-## Expanding the ESLint configuration
+## React Concepts Covered
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Concept | Where Used |
+|---|---|
+| Functional Components | NavBar, Header, TaskCard |
+| Class Components | TaskList (main logic) |
+| State | Task list, input field, time field |
+| Props | Passing tasks and handlers to TaskCard |
+| Event Handling | Add, delete, toggle complete |
+
+## Getting Started
+
+### 1. Clone the repo
+
+```
+git clone https://github.com/chandanopop/taskmanger.git
+cd taskmanger
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run the app
+
+```
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Project Structure
+
+```
+src/
+└── App.jsx       # All components live here
+```
+
+## How to Use
+
+1. Type a task name in the input field
+2. Pick a time (optional)
+3. Click **Add** or press **Enter**
+4. Check the checkbox to mark a task as done
+5. Click **Delete** to remove a task
